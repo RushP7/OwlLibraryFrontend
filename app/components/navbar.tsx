@@ -6,18 +6,18 @@ const Navbar = () => {
 	const [nav, setNav] = useState(false);
 
 	const links = [
-		{ id: 1, link: "/" },
-		{ id: 2, link: "/books" },
-		{ id: 3, link: "/borrow" },
-		{ id: 4, link: "/return" },
+		{ id: 1, link: "/", name: "Home" },
+		{ id: 2, link: "/books", name: "Books" },
+		{ id: 3, link: "/borrow", name: "Borrow" },
+		{ id: 4, link: "/return", name: "Return" },
 	];
 
 	return (
 		<div className="nav">
 			<ul>
-				{links.map(({ id, link }) => (
+				{links.map(({ id, link, name }) => (
 					<li key={id}>
-						<Link href={link}>{link}</Link>
+						<Link href={link}>{name}</Link>
 					</li>
 				))}
 			</ul>
